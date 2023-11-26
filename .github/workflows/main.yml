@@ -1,0 +1,16 @@
+name: Trigger FastAPI Endpoint
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  trigger-endpoint:
+    runs-on: macos-latest
+
+    steps:
+    - name: Make API Request
+      run: |
+        # Replace the URL with the actual URL of your FastAPI server
+        curl -X GET "https://fastapi-example-gk3l.onrender.com/trigger-endpoint"
